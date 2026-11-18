@@ -60,3 +60,12 @@
  .section{padding:62px 6%}
  .gallery-grid img{height:auto;aspect-ratio:1/1}
 }
+
+/* V5 mobile refinement and gallery presentation */
+.gallery-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.gallery-grid img{width:100%;height:290px;object-fit:cover;border-radius:3px;transition:transform .35s ease,filter .35s ease}
+.gallery-grid img:hover{transform:translateY(-4px)}
+.intro-art .arch-photo img{object-position:center center}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid img{height:auto;aspect-ratio:4/5}}
+@media(max-width:680px){.hero-photo-card{margin-bottom:48px}.intro{gap:34px}.intro-art{padding-bottom:12px}.intro-copy h2{font-size:clamp(37px,9vw,45px)}.intro-art .arch-photo{height:auto;aspect-ratio:4/4.4}.intro-art .art-stamp{left:0;bottom:0;width:96px;height:96px;font-size:15px}.gallery-grid{gap:10px}.gallery-grid img{aspect-ratio:1/1.15}.section{padding-top:65px;padding-bottom:65px}.hero-actions .btn{min-height:50px}}
+@media(prefers-reduced-motion:no-preference){.dish-image img{transition:transform .45s ease}.dish:hover .dish-image img{transform:scale(1.035)}}
