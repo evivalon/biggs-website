@@ -12,3 +12,7 @@ if(lightbox&&typeof lightbox.showModal==='function'){
  lightbox.querySelector('.lightbox-close').addEventListener('click',()=>lightbox.close());
  lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close()});
 }
+
+// V7: dismiss mobile navigation when tapping outside or pressing Escape.
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');toggle.textContent='☰';toggle.focus()}});
+document.addEventListener('click',event=>{if(nav.classList.contains('open')&&!nav.contains(event.target)&&!toggle.contains(event.target)){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation');toggle.textContent='☰'}});
