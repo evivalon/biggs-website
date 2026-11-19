@@ -111,3 +111,6 @@ html{scroll-padding-top:100px}
  .gallery-lightbox{max-height:80dvh}
 }
 @media(min-width:681px){.mobile-action-bar{display:none}}
+
+/* V8: streamlined mobile action bar */
+@media (max-width: 760px) { .mobile-action-bar {gap:8px;padding:7px 12px calc(7px + env(safe-area-inset-bottom,0px));} .mobile-action-bar a {min-height:44px;font-size:13px;} }
